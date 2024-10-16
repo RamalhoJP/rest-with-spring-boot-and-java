@@ -35,5 +35,5 @@ jobs:
     - name: Push to Docker Hub Container Registry
       run: |
         docker tag ${{ secrets.DOCKER_USERNAME }}/example-api:latest ${{ secrets.DOCKER_USERNAME }}/example-api:${{ github.run_id }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/example-api:${{ github.run_id }
+        docker push ${{ secrets.DOCKER_USERNAME }}/example-api:${{ github.run_id }}
         docker push ${{ secrets.DOCKER_USERNAME }}/example-api:latest
